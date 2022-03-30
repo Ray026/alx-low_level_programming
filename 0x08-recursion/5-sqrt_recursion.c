@@ -1,20 +1,33 @@
-#include "main.h"
-/**
- * string_toupper - change all lowercase to uppercase
- * @n: pointer
- *
- * Return: n
- */
-char *string_toupper(char *n)
-{
-	int i;
+#include "holberton.h"
 
-	i = 0;
-	while (n[i] != '\0')
-	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
-		i++;
-	}
-	return (n);
+int actual_sqrt_recursion(int n, int i);
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
+ *
+ * Return: the resulting square root
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+	return (actual_sqrt_recursion(n, 0));
+}
+
+/**
+ * actual_sqrt_recursion - recurses to find the natural
+ * square root of a number
+ * @n: number to calculate the sqaure root of
+ * @i: iterator
+ *
+ * Return: the resulting square root
+ */
+int actual_sqrt_recursion(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (actual_sqrt_recursion(n, i + 1));
 }
