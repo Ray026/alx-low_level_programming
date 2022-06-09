@@ -1,4 +1,4 @@
-0x17. C - Doubly linked lists
+0x17. C - Doubly linked list
 [0. Print list](./ 0-print_dlistint.c)
 Write a function that prints all the elements of a dlistint_t list.
 1. List length
@@ -23,3 +23,4 @@ Find the password for crackme4.
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 11. crackme5
 Write a keygen for crackme5.
+
